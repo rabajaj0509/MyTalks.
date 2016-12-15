@@ -1,0 +1,34 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}Weather Averages for {{ city }}{% endblock %}
+
+{% block navbar %}
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <a class="navbar-brand" href="#">Weather</a>
+        </div>    
+    </nav>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Weather Averages</h1>
+        <h2>{{ city }}</h2>
+        <table class="table table-hover">
+            <tr>
+                <th>Month</th>
+                <th>Min</th>
+                <th>Max</th>
+                <th>Rainfall</th>
+            </tr>
+            {% for month in months %}
+            <tr>
+                <td>{{ month }}</td>
+                <td>{{ weather[month]['min'] }}</td>
+                <td>{{ weather[month]['max'] }}</td>
+                <td>{{ weather[month]['rain'] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>    
+{% endblock %}
