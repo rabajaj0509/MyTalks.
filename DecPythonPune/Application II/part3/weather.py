@@ -23,7 +23,7 @@ def index():
         'December': {'min': 36, 'max': 45, 'rain': 6.94}
     }
     
-    return render_template('index.html', city='Portland, OR', months=months,
+    return render_template('index.html', city='Pune, India', months=months,
                            weather=weather)
 
 

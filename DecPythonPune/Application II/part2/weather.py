@@ -20,8 +20,8 @@ def index():
         'November': {'min': 41, 'max': 52, 'rain': 6.74},
         'December': {'min': 36, 'max': 45, 'rain': 6.94}
     }
-    return render_template('index.html', city='Portland, OR', months=months,
-                           )
+    return render_template('index.html', city='Pune, India', months=months,
+                           weather=weather)
 
 
 if __name__ == '__main__':
